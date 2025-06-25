@@ -1,0 +1,28 @@
+@baseUrl = https://localhost:7234
+@orderId = 00000000-0000-0000-0000-000000000000
+
+### Create a new order
+POST {{baseUrl}}/api/order
+Content-Type: application/json
+
+{
+  "customerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "customerSegment": "Premium",
+  "originalAmount": 100.00,
+  "items": [
+    {
+      "productName": "Test Product",
+      "unitPrice": 100.00,
+      "quantity": 1
+    }
+  ]
+}
+
+### Get the created order (replace orderId with the ID from the create response)
+GET {{baseUrl}}/api/order/{{orderId}}
+
+### Update order status
+PUT {{baseUrl}}/api/order/{{orderId}}/status
+Content-Type: application/json
+
+"Confirmed"
