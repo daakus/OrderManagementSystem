@@ -1,6 +1,6 @@
 # Order Management System API
 
-A .NET 9 Web API project that implements an order management system with features for discount calculation, order status tracking, and analytics.
+A .NET 8 Web API project that implements an order management system with features for discount calculation, order status tracking, and analytics.
 
 ## Project Overview
 
